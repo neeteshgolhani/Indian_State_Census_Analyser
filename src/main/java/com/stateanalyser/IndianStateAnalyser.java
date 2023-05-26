@@ -7,9 +7,10 @@ public class IndianStateAnalyser {
             csvStateCensus.loadCSVData("C:\\Users\\MOURYA\\IdeaProjects\\Day27_Indian_State_Census_Analyser\\src\\main\\java\\com\\stateanalyser//state_census.csv");
             int numberOfRecords = csvStateCensus.getNumberOfRecords(); // Get the number of records
             System.out.println("Number of records: " + numberOfRecords);
+        } catch (CSVFileFormatException e) {
+            System.out.println("Custom Exception: " + e.getMessage());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 }
-
